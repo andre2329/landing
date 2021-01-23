@@ -1,3 +1,4 @@
+
 var firebaseConfig = {
     apiKey: "AIzaSyCE4-ONFWZOlJReuw0qb4-WWleKkiRSPfs",
     authDomain: "landing-dffe9.firebaseapp.com",
@@ -85,3 +86,43 @@ function submitForm(e){
 function getInputValue(id){
     return document.getElementById(id).value;
 }
+function setSkills() {
+    
+    console.log(skills)
+    // <div class="skills-data">
+    //                     <div class="skills-name">
+    //                         <i class='bx bxl-html5 skills-icon'></i>
+    //                         <span class="skills-name">
+    //                             HTML5
+    //                         </span>
+    //                     </div>
+    //                     <div>
+    //                         <span class="skills-percentange">95%</span>
+    //                     </div>
+    //                     <div class="skills-bar skills-html">
+    //                     </div>
+    // </div>
+    var skillData = ''
+    var skillContainer = document.getElementById('skills-container')
+    skills.forEach(el=>{
+        console.log(el.name)
+        var skillName = "<div class='skills-name'>"+
+                             "<i class='"+el.icon+" skills-icon'></i>"+
+                            "<span class='skills-name'>"+
+                                 el.name
+                             +"</span>"
+                         +"</div>"
+        var skillPercentage = "<div>"+
+                        "<span class='skills-percentange'>"+el.percentage+"</span>"+
+                             "</div>"+
+                             "<div class='skills-bar' style='width:"+el.percentage+"'>"+
+                         "</div>"
+        skillData = skillData+"<div class='skills-data'>"+
+        skillName+skillPercentage
+        +"</div>"
+        // skillContainer.appendChild(skillData)
+    })
+    skillContainer.innerHTML = skillData
+}
+
+setSkills()
