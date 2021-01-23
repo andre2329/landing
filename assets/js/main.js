@@ -1,14 +1,29 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyCE4-ONFWZOlJReuw0qb4-WWleKkiRSPfs",
+    authDomain: "landing-dffe9.firebaseapp.com",
+    projectId: "landing-dffe9",
+    storageBucket: "landing-dffe9.appspot.com",
+    messagingSenderId: "600628151036",
+    appId: "1:600628151036:web:adeef8c7bd0bf5c70acd79",
+    measurementId: "G-SHKC4N17RS"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  
+var messageRef = firebase.database().ref('mensajes');
+
 // ===Menu show===
 const showMenu = (toggleId,navId)=>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
-    console.log(toggle)
     if(toggle && nav){
         toggle.addEventListener('click',()=>{
             nav.classList.toggle('show')
         })
     }
 }
+
 
 showMenu('nav-toggle','nav-menu')
 // == Active and remove menu ==
@@ -47,3 +62,26 @@ sr.reveal('.skills-data',{interval:200})
 sr.reveal('.skills-img',{delay:400})
 /* Scroll Work */
 sr.reveal('.work-img',{})
+sr.reveal('.work-item',{interval:200})
+
+document.getElementById('contact-form').addEventListener('submit',submitForm)
+
+
+function submitForm(e){
+    e.preventDefault()
+    var nombres = getInputValue('nombres')
+    var email = getInputValue('email')
+    var mensaje = getInputValue('mensaje')
+
+    var newMessageRef = messageRef.push()
+    newMessageRef.set({
+        nombres:nombres,
+        email:email,
+        mensaje:mensaje
+    })
+    var formulario = document.getElementById('contact-container')
+    formulario.innerHTML = 'Gracias, en poco tiempo nos pondremos en contacto!'
+}
+function getInputValue(id){
+    return document.getElementById(id).value;
+}

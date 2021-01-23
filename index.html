@@ -11,8 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@100&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
     <link rel="icon" href="./assets/img/logo.ico">
+
+
 </head>
 
 <body>
@@ -139,7 +143,7 @@
                     </div>
                     <div class="skills-data">
                         <div class="skills-name">
-                            <i class='bx bxl-nodejs skills-icon' ></i>
+                            <i class='bx bxl-nodejs skills-icon'></i>
                             <span class="skills-name">
                                 Node Js
                             </span>
@@ -178,7 +182,7 @@
                     </div>
                     <div class="skills-data">
                         <div class="skills-name">
-                            <i class='bx bxl-android skills-icon' ></i>
+                            <i class='bx bxl-android skills-icon'></i>
                             <span class="skills-name">
                                 Android Studio (Java)
                             </span>
@@ -191,7 +195,7 @@
                     </div>
                     <div class="skills-data">
                         <div class="skills-name">
-                            <i class='bx bxl-jquery skills-icon' ></i>
+                            <i class='bx bxl-jquery skills-icon'></i>
                             <span class="skills-name">
                                 Jquery
                             </span>
@@ -233,19 +237,68 @@
 
             </div>
 
-            
+
         </section>
-        
+
         <!-- ===Work=== -->
-        <section class="work bd-grid section" id="work">
-            <h2 class="section-title">Trabajos que he realizado</h2>
+        <section class="work bd-grid" id="work">
+            <h2 class="section-title">Algunos trabajos que he realizado</h2>
             <div class="work-container">
                 <div class="work-item">
                     <img src="./assets/img/horarios.png" alt="Horarios preview">
-                    <div>Hola</div>
+                    <div class="work-lan">
+                        <p>Sistema de gesti&oacute;n de horarios</p>
+                        <i class="fab fa-php work-item-icon-lan"></i>
+                        <i class='fab fa-html5 work-item-icon-lan'></i>
+                        <i class='fab fa-css3 work-item-icon-lan'></i>
+                        <i class='bx bxl-jquery work-item-icon-lan'></i>
+                    </div>
+                    <div class="work-description">
+
+                        <a href="https://github.com/andre2329/gestion-de-horarios" target="__blank"
+                            class="work-item-icon"><i class='bx bxl-github work-icon'></i></a>
+                        <a href="https://juanrodriguezapps.000webhostapp.com/" target="__blank"
+                            class="work-item-icon"><i class='bx bx-link-external work-icon'></i></a>
+
+                    </div>
                 </div>
                 <div class="work-item">
-                    <img src="./assets/img/horarios.png" alt="Horarios preview">
+                    <img src="./assets/img/siembra.png" alt="Horarios preview">
+                    <div class="work-lan">
+                        <p>Demo page con Laravel</p>
+                        <i class="fab fa-laravel work-item-icon-lan"></i>
+                        <i class='fab fa-html5 work-item-icon-lan'></i>
+                        <i class='fab fa-css3 work-item-icon-lan'></i>
+                        <i class='bx bxl-jquery work-item-icon-lan'></i>
+                    </div>
+                    <div class="work-description">
+                        <a href="https://github.com/andre2329/siembraautomatizada" target="__blank"
+                            class="work-item-icon"><i class='bx bxl-github work-icon'></i></a>
+                        <a href="http://www.siembraautomatizada.tech/" target="__blank" class="work-item-icon"><i
+                                class='bx bx-link-external work-icon'></i></a>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img src="./assets/img/ecg.png" alt="Horarios preview">
+                    <div class="work-lan">
+                        <p>Caracter&iacute;sticas ECG con Python</p>
+                        <i class="fab fa-python work-item-icon-lan"></i>
+                    </div>
+                    <div class="work-description">
+                        <a href="https://github.com/andre2329/proyecto-ecg" target="__blank" class="work-item-icon"><i
+                                class='bx bxl-github work-icon'></i></a>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img src="./assets/img/sunat.png" alt="Horarios preview">
+                    <div class="work-lan">
+                        <p>Validador de comprobantes SUNAT con Python</p>
+                        <i class="fab fa-python work-item-icon-lan"></i>
+                    </div>
+                    <div class="work-description">
+                        <a href="https://github.com/andre2329/validador-sunat-python" target="__blank"
+                            class="work-item-icon"><i class='bx bxl-github work-icon'></i></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -254,13 +307,15 @@
             <h2 class="section-title">
                 Contacto
             </h2>
-            <div class="contact-container bg-grid">
-                <form action="" class="contact-form">
-                    <input type="text" placeholder="Nombres" class="contact-input">
-                    <input type="mail" placeholder="Correo electr&oacute;nico" class="contact-input">
-                    <textarea name="" placeholder="Mensaje" id="" cols="30" class="contact-input" rows="10"></textarea>
-
-                    <input type="button" value="Enviar" class="contact-button button">
+            <div class="contact-container bg-grid" id="contact-container">
+                <form class="contact-form" id="contact-form" method="POST">
+                    <input type="text" placeholder="Nombres*" class="contact-input" name="nombres" id="nombres"
+                        required>
+                    <input type="email" placeholder="Correo electr&oacute;nico*" class="contact-input" name="email"
+                        id="email" required>
+                    <textarea placeholder="Mensaje*" cols="30" class="contact-input" rows="10" name="mensaje"
+                        id="mensaje" required></textarea>
+                    <input type="submit" value="Enviar" class="contact-button button">
                 </form>
             </div>
         </section>
@@ -280,6 +335,17 @@
     </footer>
     <!--Scroll Reveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      </script>
     <!--Main Js-->
     <script src="./assets/js/main.js"></script>
 </body>
