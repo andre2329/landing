@@ -88,24 +88,9 @@ function getInputValue(id){
 }
 function setSkills() {
     
-    console.log(skills)
-    // <div class="skills-data">
-    //                     <div class="skills-name">
-    //                         <i class='bx bxl-html5 skills-icon'></i>
-    //                         <span class="skills-name">
-    //                             HTML5
-    //                         </span>
-    //                     </div>
-    //                     <div>
-    //                         <span class="skills-percentange">95%</span>
-    //                     </div>
-    //                     <div class="skills-bar skills-html">
-    //                     </div>
-    // </div>
     var skillData = ''
     var skillContainer = document.getElementById('skills-container')
     skills.forEach(el=>{
-        console.log(el.name)
         var skillName = "<div class='skills-name'>"+
                              "<i class='"+el.icon+" skills-icon'></i>"+
                             "<span class='skills-name'>"+
@@ -120,7 +105,6 @@ function setSkills() {
         skillData = skillData+"<div class='skills-data'>"+
         skillName+skillPercentage
         +"</div>"
-        // skillContainer.appendChild(skillData)
     })
     skillContainer.innerHTML = skillData
 }
